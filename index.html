@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canalizaciones Angelicales — Raíz y Camino</title>
+  <meta name="description" content="Mensajes que tu alma ya estaba esperando recibir. Canalizaciones angelicales con Lu — Raíz y Camino." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --purple-deep:   #3C3489;
+      --purple-mid:    #534AB7;
+      --purple-soft:   #7F77DD;
+      --purple-pale:   #EEEDFE;
+      --purple-ghost:  #F5F0FF;
+      --gold:          #9C7E5A;
+      --gold-light:    #C4A882;
+      --gold-pale:     #F5EBD8;
+      --warm-white:    #FDF8F2;
+      --ink:           #1E1B2E;
+      --ink-soft:      #4A4460;
+      --ink-muted:     #7A7490;
+      --border:        rgba(127,119,221,0.15);
+      --border-gold:   rgba(156,126,90,0.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background-color: var(--warm-white);
+      color: var(--ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE TEXTURE OVERLAY ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    .display {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+    }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    /* ─── LAYOUT ─── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section { position: relative; z-index: 1; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(174,166,236,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(196,168,130,0.1) 0%, transparent 60%),
+        var(--warm-white);
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero-symbol {
+      display: block;
+      margin: 0 auto 1.5rem;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 8vw, 72px);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--purple-deep);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(19px, 3vw, 24px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink-soft);
+      max-width: 480px;
+      margin: 0 auto 3rem;
+      line-height: 1.5;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+    .btn-fill {
+      background: var(--purple-mid);
+      color: #fff;
+      border: none;
+    }
+    .btn-fill:hover { background: var(--purple-deep); transform: translateY(-1px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--purple-mid);
+      border: 1px solid var(--purple-soft);
+    }
+    .btn-outline:hover { background: var(--purple-pale); transform: translateY(-1px); }
+
+    /* ─── HERO ILLUSTRATION ─── */
+    .hero-art {
+      margin-top: 3.5rem;
+      animation: fadeUp 1s 0.5s ease both;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), var(--purple-soft), var(--gold-light), transparent);
+      opacity: 0.35;
+    }
+
+    .glyph-divider {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 0.4em;
+      opacity: 0.6;
+    }
+
+    /* ─── QUÉ ES ─── */
+    .what-section {
+      padding: 5rem 0;
+    }
+
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 300;
+      color: var(--ink);
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-sub {
+      font-size: 15px;
+      color: var(--ink-soft);
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto 3rem;
+      line-height: 1.75;
+    }
+
+    .what-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .what-box {
+      border-radius: 20px;
+      padding: 2rem 1.75rem;
+    }
+    .what-box.si {
+      background: var(--purple-ghost);
+      border: 1px solid rgba(127,119,221,0.2);
+    }
+    .what-box.no {
+      background: #FDFAF5;
+      border: 1px solid var(--border-gold);
+    }
+
+    .what-box h3 {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      font-weight: 500;
+    }
+    .what-box.si h3 { color: var(--purple-deep); }
+    .what-box.no h3 { color: var(--gold); }
+
+    .what-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .what-box ul li {
+      font-size: 14px;
+      color: var(--ink-soft);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .what-box.si ul li::before { content: '✦'; position: absolute; left: 0; color: var(--purple-soft); font-size: 9px; top: 4px; }
+    .what-box.no ul li::before { content: '◇'; position: absolute; left: 0; color: var(--gold); font-size: 9px; top: 4px; }
+
+    /* ─── INCLUYE ─── */
+    .includes-section {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--purple-ghost) 0%, var(--warm-white) 100%);
+    }
+
+    .inc-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .inc-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem 1.25rem;
+    }
+
+    .inc-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 14px;
+    }
+    .inc-icon.purple { background: var(--purple-pale); color: var(--purple-mid); }
+    .inc-icon.gold { background: var(--gold-pale); color: var(--gold); }
+
+    .inc-card h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .inc-card p { font-size: 13px; color: var(--ink-muted); line-height: 1.55; }
+
+    /* ─── PRECIOS ─── */
+    .pricing-section { padding: 5rem 0; }
+
+    .launch-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold-pale);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 40px;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .price-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem 1.75rem;
+      position: relative;
+    }
+
+    .price-card.featured {
+      border: 1.5px solid var(--purple-soft);
+      background: var(--purple-ghost);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--purple-mid);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      padding: 4px 16px;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+
+    .price-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .price-time {
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+    }
+    .price-cop {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--purple-deep);
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .price-usd {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .price-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 1.75rem; }
+    .price-list li {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .price-list li::before { content: '✦'; position: absolute; left: 0; color: var(--purple-soft); font-size: 9px; top: 3px; }
+
+    .price-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 40px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+    .price-card:not(.featured) .price-btn {
+      background: transparent;
+      color: var(--purple-mid);
+      border: 1px solid var(--purple-soft);
+    }
+    .price-card:not(.featured) .price-btn:hover { background: var(--purple-pale); }
+    .price-card.featured .price-btn {
+      background: var(--purple-mid);
+      color: #fff;
+      border: none;
+    }
+    .price-card.featured .price-btn:hover { background: var(--purple-deep); }
+
+    /* ─── TESTIMONIOS ─── */
+    .testimonials { padding: 5rem 0; }
+
+    .testimony {
+      border-left: 2px solid var(--gold-light);
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border-radius: 0 16px 16px 0;
+      border-top: 1px solid var(--border-gold);
+      border-right: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--border-gold);
+      margin-bottom: 16px;
+    }
+    .testimony p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-style: italic;
+      color: var(--ink-soft);
+      line-height: 1.65;
+    }
+    .testimony-name {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ─── CIERRE ─── */
+    .closing {
+      padding: 5rem 0 6rem;
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, var(--purple-ghost) 50%, var(--gold-pale) 100%);
+    }
+
+    .closing h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .closing p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      max-width: 420px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .closing-note {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 1.5rem;
+      opacity: 0.7;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      opacity: 0.5;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 600px) {
+      .what-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .inc-cards { grid-template-columns: 1fr; }
+      .hero { padding: 4rem 1.5rem 3rem; }
+      .container { padding: 0 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ░░ HERO ░░ -->
+<section class="hero">
+  <p class="hero-eyebrow">Raíz y Camino</p>
+
+  <svg class="hero-symbol" viewBox="0 0 60 60" width="48" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="30" r="26" fill="none" stroke="#AFA9EC" stroke-width="0.7" stroke-dasharray="3 5" opacity="0.6"/>
+    <circle cx="30" cy="30" r="18" fill="none" stroke="#C4A882" stroke-width="0.5" opacity="0.55"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" fill="#534AB7" font-family="serif" opacity="0.85">✦</text>
+  </svg>
+
+  <h1>Canalizaciones<br>Angelicales</h1>
+  <p class="hero-subtitle">Mensajes que tu alma ya estaba esperando recibir</p>
+
+  <div class="cta-group">
+    <a class="btn btn-fill" href="https://wa.me/573213778630?text=Hola%2C%20quiero%20agendar%20una%20canalización" target="_blank">Quiero mi sesión</a>
+    <a class="btn btn-outline" href="https://wa.me/573213778630?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20las%20canalizaciones" target="_blank">Escribirme por WhatsApp</a>
+  </div>
+
+  <!-- Ilustración angelical hero -->
+  <div class="hero-art">
+    <svg viewBox="0 0 480 200" width="480" style="max-width:100%;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="hglow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#E8E4FF" stop-opacity="0.5"/>
+          <stop offset="100%" stop-color="#FDF8F2" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="240" cy="100" rx="180" ry="80" fill="url(#hglow)"/>
+      <!-- geometría central -->
+      <polygon points="240,42 288,115 240,148 192,115" fill="none" stroke="#AFA9EC" stroke-width="0.8" opacity="0.6"/>
+      <polygon points="240,58 278,110 240,132 202,110" fill="none" stroke="#C4A882" stroke-width="0.5" opacity="0.55"/>
+      <circle cx="240" cy="100" r="24" fill="none" stroke="#7F77DD" stroke-width="0.7" opacity="0.45"/>
+      <circle cx="240" cy="100" r="36" fill="none" stroke="#9C7E5A" stroke-width="0.4" stroke-dasharray="3 5" opacity="0.4"/>
+      <circle cx="240" cy="100" r="52" fill="none" stroke="#AFA9EC" stroke-width="0.35" stroke-dasharray="2 7" opacity="0.3"/>
+      <text x="240" y="107" text-anchor="middle" font-size="18" fill="#534AB7" opacity="0.8" font-family="serif">✦</text>
+      <!-- alas izquierda -->
+      <path d="M192,100 Q150,65 122,84 Q155,76 192,100" fill="#E8E4FF" stroke="#AFA9EC" stroke-width="0.5" opacity="0.65"/>
+      <path d="M190,110 Q144,88 118,114 Q148,100 190,110" fill="#EDE8FF" stroke="#AFA9EC" stroke-width="0.4" opacity="0.55"/>
+      <path d="M194,120 Q150,118 132,142 Q156,122 194,120" fill="#F0ECF8" stroke="#C4B8E8" stroke-width="0.4" opacity="0.45"/>
+      <path d="M196,128 Q158,132 145,154 Q164,134 196,128" fill="#F5F2FC" stroke="#C4B8E8" stroke-width="0.3" opacity="0.35"/>
+      <!-- alas derecha -->
+      <path d="M288,100 Q330,65 358,84 Q325,76 288,100" fill="#E8E4FF" stroke="#AFA9EC" stroke-width="0.5" opacity="0.65"/>
+      <path d="M290,110 Q336,88 362,114 Q332,100 290,110" fill="#EDE8FF" stroke="#AFA9EC" stroke-width="0.4" opacity="0.55"/>
+      <path d="M286,120 Q330,118 348,142 Q324,122 286,120" fill="#F0ECF8" stroke="#C4B8E8" stroke-width="0.4" opacity="0.45"/>
+      <path d="M284,128 Q322,132 335,154 Q316,134 284,128" fill="#F5F2FC" stroke="#C4B8E8" stroke-width="0.3" opacity="0.35"/>
+      <!-- rayos de luz -->
+      <line x1="240" y1="12" x2="240" y2="36" stroke="#C4A882" stroke-width="0.6" opacity="0.45"/>
+      <line x1="262" y1="16" x2="254" y2="38" stroke="#C4A882" stroke-width="0.4" opacity="0.35"/>
+      <line x1="218" y1="16" x2="226" y2="38" stroke="#C4A882" stroke-width="0.4" opacity="0.35"/>
+      <line x1="284" y1="26" x2="270" y2="46" stroke="#AFA9EC" stroke-width="0.35" opacity="0.3"/>
+      <line x1="196" y1="26" x2="210" y2="46" stroke="#AFA9EC" stroke-width="0.35" opacity="0.3"/>
+      <!-- estrellas flotantes -->
+      <text x="110" y="58" font-size="9" fill="#9C7E5A" opacity="0.45">✦</text>
+      <text x="355" y="52" font-size="7" fill="#7F77DD" opacity="0.38">✦</text>
+      <text x="82" y="112" font-size="6" fill="#AFA9EC" opacity="0.45">✦</text>
+      <text x="384" y="118" font-size="8" fill="#9C7E5A" opacity="0.4">✦</text>
+      <text x="160" y="175" font-size="6" fill="#7F77DD" opacity="0.28">✦</text>
+      <text x="308" y="170" font-size="7" fill="#9C7E5A" opacity="0.28">✦</text>
+    </svg>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ░░ QUÉ ES ░░ -->
+<section class="what-section">
+  <div class="container">
+    <p class="section-label">El espacio</p>
+    <h2 class="section-title">¿Qué es una canalización angelical?</h2>
+    <p class="section-sub">Un espacio sagrado de escucha profunda donde me conecto con la energía de tus ángeles y guías espirituales para traerte mensajes concretos y amorosos sobre lo que estás viviendo.</p>
+
+    <div class="what-grid">
+      <div class="what-box si">
+        <h3>Esto es para ti si…</h3>
+        <ul>
+          <li>Sientes que algo en ti quiere ser visto o escuchado</li>
+          <li>Estás en un momento de transición o decisión importante</li>
+          <li>Buscas claridad desde un lugar diferente al racional</li>
+          <li>Quieres una herramienta para hacer conciencia de lo que estás viviendo</li>
+          <li>Estás abierta a recibir con honestidad, no solo lo que quieres oír</li>
+        </ul>
+      </div>
+      <div class="what-box no">
+        <h3>Esto no es para ti si…</h3>
+        <ul>
+          <li>Buscas respuestas mágicas o soluciones inmediatas</li>
+          <li>Quieres que alguien tome decisiones por ti</li>
+          <li>Esperas certezas sobre el futuro</li>
+          <li>No estás dispuesta a mirar con honestidad lo que sientes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pluma decorativa -->
+<div style="text-align:center; padding: 0.5rem 0;">
+  <svg viewBox="0 0 320 70" width="260" style="max-width:90%; opacity:0.6;" xmlns="http://www.w3.org/2000/svg">
+    <path d="M160,8 Q182,28 174,52 Q165,66 160,68 Q155,66 146,52 Q138,28 160,8Z" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.6"/>
+    <path d="M160,8 Q160,38 160,68" stroke="#7F77DD" stroke-width="0.4" fill="none" opacity="0.5"/>
+    <path d="M160,20 Q171,30 168,44" stroke="#AFA9EC" stroke-width="0.35" fill="none" opacity="0.5"/>
+    <path d="M160,20 Q149,30 152,44" stroke="#AFA9EC" stroke-width="0.35" fill="none" opacity="0.5"/>
+    <path d="M78,32 Q92,20 98,36 Q88,32 78,32Z" fill="#F5EBD8" stroke="#C4A882" stroke-width="0.5" opacity="0.55"/>
+    <path d="M242,32 Q228,20 222,36 Q232,32 242,32Z" fill="#F5EBD8" stroke="#C4A882" stroke-width="0.5" opacity="0.55"/>
+    <text x="46" y="28" font-size="7" fill="#9C7E5A" opacity="0.4">✦</text>
+    <text x="264" y="26" font-size="6" fill="#7F77DD" opacity="0.38">✦</text>
+  </svg>
+</div>
+
+<div class="divider"></div>
+
+<!-- ░░ LO QUE RECIBES ░░ -->
+<section class="includes-section">
+  <div class="container">
+    <p class="section-label">Cada sesión incluye</p>
+    <h2 class="section-title">Lo que recibes</h2>
+    <p class="section-sub">Sin importar qué opción elijas, cada canalización lleva presencia y cuidado real</p>
+    <div class="inc-cards">
+      <div class="inc-card">
+        <div class="inc-icon purple">✦</div>
+        <h4>Sesión por videollamada</h4>
+        <p>Un espacio íntimo, sin apuro, donde la conexión es real</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon gold">◈</div>
+        <h4>Resumen escrito</h4>
+        <p>Lo canalizado en texto para que puedas volver a él cuando lo necesites</p>
+      </div>
+      <div class="inc-card">
+        <div class="inc-icon purple">◇</div>
+        <h4>Tu pregunta o situación</h4>
+        <p>Traes lo que más te pesa y desde ahí trabajamos juntas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ░░ PRECIOS ░░ -->
+<section class="pricing-section">
+  <div class="container">
+    <p class="section-label">Las sesiones</p>
+    <h2 class="section-title">Elige tu sesión</h2>
+    <p class="section-sub" style="margin-bottom:1.25rem;">Dos caminos, el mismo cuidado y presencia</p>
+    <div style="text-align:center; margin-bottom:2.25rem;">
+      <span class="launch-tag">✦ Precios de lanzamiento</span>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <p class="price-name">Canalización Express</p>
+        <p class="price-time">20 – 25 minutos</p>
+        <p class="price-cop">$55.000 COP</p>
+        <p class="price-usd">~ USD $15</p>
+        <ul class="price-list">
+          <li>Videollamada de 20 a 25 min</li>
+          <li>Una pregunta o situación principal</li>
+          <li>Resumen escrito de la sesión</li>
+          <li>Espacio de cierre y orientación</li>
+        </ul>
+        <a class="price-btn" href="https://wa.me/573213778630?text=Hola%2C%20quiero%20la%20Canalización%20Express" target="_blank">Quiero esta sesión</a>
+      </div>
+      <div class="price-card featured">
+        <span class="featured-badge">Más completa</span>
+        <p class="price-name">Canalización Completa</p>
+        <p class="price-time">50 – 60 minutos</p>
+        <p class="price-cop">$90.000 COP</p>
+        <p class="price-usd">~ USD $25</p>
+        <ul class="price-list">
+          <li>Videollamada de 50 a 60 min</li>
+          <li>Exploración profunda de tu situación</li>
+          <li>Mensajes de tus guías y ángeles</li>
+          <li>Resumen escrito detallado</li>
+          <li>Ritual y/u oración personalizada según lo vivido en sesión</li>
+          <li>Espacio de cierre y orientación para integrar lo recibido</li>
+        </ul>
+        <a class="price-btn" href="https://wa.me/573213778630?text=Hola%2C%20quiero%20la%20Canalización%20Completa" target="_blank">Quiero esta sesión</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- geometría sagrada decorativa -->
+<div style="text-align:center; padding: 1rem 0;">
+  <svg viewBox="0 0 320 60" width="240" style="max-width:90%; opacity:0.55;" xmlns="http://www.w3.org/2000/svg">
+    <line x1="20" y1="30" x2="300" y2="30" stroke="#C4A882" stroke-width="0.5" opacity="0.35"/>
+    <polygon points="160,14 165,26 178,26 168,34 172,46 160,39 148,46 152,34 142,26 155,26" fill="none" stroke="#7F77DD" stroke-width="0.65" opacity="0.5"/>
+    <circle cx="160" cy="30" r="5" fill="none" stroke="#9C7E5A" stroke-width="0.5" opacity="0.45"/>
+    <circle cx="78" cy="30" r="3" fill="none" stroke="#AFA9EC" stroke-width="0.5" opacity="0.4"/>
+    <circle cx="242" cy="30" r="3" fill="none" stroke="#AFA9EC" stroke-width="0.5" opacity="0.4"/>
+    <text x="42" y="25" font-size="6" fill="#9C7E5A" opacity="0.38">✦</text>
+    <text x="268" y="25" font-size="6" fill="#9C7E5A" opacity="0.38">✦</text>
+  </svg>
+</div>
+
+<div class="divider"></div>
+
+<!-- ░░ TESTIMONIOS ░░ -->
+<section class="testimonials">
+  <div class="container">
+    <p class="section-label">Experiencias</p>
+    <h2 class="section-title" style="margin-bottom:2rem;">Lo que dicen quienes ya lo vivieron</h2>
+    <div class="testimony">
+      <p>"Llegué sin saber bien qué esperar y salí con una claridad que sentía muy lejana. Fue como si alguien le pusiera palabras a lo que yo cargaba pero no podía nombrar."</p>
+      <p class="testimony-name">— Valentina, 34 años · Colombia</p>
+    </div>
+    <div class="testimony">
+      <p>"Lo más honesto fue que no me dijo lo que quería escuchar, sino lo que necesitaba. Eso fue lo que más me movió por dentro."</p>
+      <p class="testimony-name">— Mónica, 29 años · México</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ░░ CIERRE ░░ -->
+<section class="closing">
+  <div class="container">
+    <svg viewBox="0 0 160 80" width="140" style="display:block; margin: 0 auto 2rem; opacity:0.65;" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="40" r="30" fill="none" stroke="#AFA9EC" stroke-width="0.6" stroke-dasharray="3 5" opacity="0.55"/>
+      <circle cx="80" cy="40" r="20" fill="none" stroke="#C4A882" stroke-width="0.5" opacity="0.5"/>
+      <text x="80" y="47" text-anchor="middle" font-size="16" fill="#534AB7" opacity="0.75" font-family="serif">✦</text>
+      <path d="M36,40 Q46,24 58,32" stroke="#AFA9EC" stroke-width="0.5" fill="none" opacity="0.45"/>
+      <path d="M124,40 Q114,24 102,32" stroke="#AFA9EC" stroke-width="0.5" fill="none" opacity="0.45"/>
+      <path d="M34,43 Q44,28 56,35" stroke="#C4B8E8" stroke-width="0.4" fill="none" opacity="0.38"/>
+      <path d="M126,43 Q116,28 104,35" stroke="#C4B8E8" stroke-width="0.4" fill="none" opacity="0.38"/>
+      <text x="20" y="34" font-size="6" fill="#9C7E5A" opacity="0.38">✦</text>
+      <text x="132" y="34" font-size="6" fill="#9C7E5A" opacity="0.38">✦</text>
+    </svg>
+
+    <h2>Tu momento de escuchar<br>lo que el cielo tiene para ti</h2>
+    <p>Las sesiones son por agendamiento. Cada canalización lleva tiempo, presencia y energía real — te acompaño con cuidado y sin afán.</p>
+    <div class="cta-group">
+      <a class="btn btn-fill" href="https://wa.me/573213778630?text=Hola%2C%20quiero%20agendar%20una%20canalización" target="_blank">Quiero mi sesión</a>
+      <a class="btn btn-outline" href="https://wa.me/573213778630?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20las%20canalizaciones" target="_blank">Tengo una pregunta</a>
+    </div>
+    <p class="closing-note">Una vez confirmado el pago, te contacto para coordinar fecha y hora.</p>
+  </div>
+</section>
+
+<footer>
+  Raíz y Camino &nbsp;·&nbsp; Canalizaciones Angelicales
+</footer>
+
+</body>
+</html>
